@@ -3,7 +3,7 @@ import EventCard from './EventCard';
 
 interface Props {
   title: string;
-  events: Event[]
+  events: CustomEvent[]
   containerClassName?:string
 }
 
