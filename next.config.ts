@@ -27,9 +27,6 @@ const nextConfig: NextConfig = {
   },
   typescript: {
     ignoreBuildErrors: false, // Set to `true` if you want to prevent build failures due to TypeScript errors
-  },
-  config: {
-    runtime = 'nodejs'
   }
 };
 
