@@ -1,23 +1,12 @@
 import React from 'react'
 import EventCard from './EventCard';
+import { EventType } from 'react-hook-form';
 
 
-interface EventType {
-  id: number;
-  title: string;
-  event_host: string;
-  category: string;
-  rating: number;
-  total_spaces: number;
-  available_spaces: number;
-  description: string;
-  cover: string;
-  summary: string;
-}
 
 interface Props {
   title: string;
-  events: EventType[]
+  events: AllEvent[]
   containerClassName?:string
 }
 

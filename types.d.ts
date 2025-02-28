@@ -1,4 +1,4 @@
-interface EventU{
+interface AllEvent{
     id:number;
     title: string;
     event_host: string;
@@ -9,7 +9,7 @@ interface EventU{
     description: string;
     cover: string;
     summary: string;
-    isBooked?:boolean;
+
 }
 
 interface AuthCredentails {
