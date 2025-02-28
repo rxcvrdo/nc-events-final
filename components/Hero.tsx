@@ -20,7 +20,7 @@ const Hero = () => {
             </Button>
           </div>
           <Image
-          src="/icons/hero-new-w.png"
+          src="/icons/hero-new-.png"
           alt="hero"
           width={1000}
           height={1000}

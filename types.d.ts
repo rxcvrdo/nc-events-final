@@ -1,4 +1,4 @@
-interface CustomEvent{
+interface EventU{
     id:number;
     title: string;
     event_host: string;

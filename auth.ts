@@ -66,7 +66,9 @@
 //   }
 
 // })
-export const runtime = 'nodejs';
+export const config = {
+  runtime: 'nodejs', 
+};
 
 
 

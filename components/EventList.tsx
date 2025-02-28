@@ -1,9 +1,24 @@
 import React from 'react'
 import EventCard from './EventCard';
 
+
+interface EventType {
+  id: number;
+  title: string;
+  event_host: string;
+  category: string;
+  rating: number;
+  total_spaces: number;
+  available_spaces: number;
+  description: string;
+  cover: string;
+  summary: string;
+  isBooked: boolean
+}
+
 interface Props {
   title: string;
-  events: CustomEvent[]
+  events: EventType[]
   containerClassName?:string
 }
 
