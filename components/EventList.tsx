@@ -13,7 +13,6 @@ interface EventType {
   description: string;
   cover: string;
   summary: string;
-  isBooked: boolean
 }
 
 interface Props {
