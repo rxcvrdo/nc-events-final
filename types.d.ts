@@ -9,6 +9,7 @@ interface AllEvent{
     description: string;
     cover: string;
     summary: string;
+    isBooked?: boolean;
 
 }
 

@@ -10,7 +10,7 @@ const EventCard = ({id,
     category, 
     cover, 
     isBooked = false}
-    : Event) => 
+    : AllEvent) => 
     <li className={cn(isBooked && "xs:w-52 w-full")}>
         <Link href={`/events/${id}`} className={cn(isBooked && 'w-full flex flex-col items-center')}>
             <EventCover variant='wide' coverImage={cover} />
