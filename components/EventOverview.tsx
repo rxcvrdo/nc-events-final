@@ -13,7 +13,7 @@ const EventOverview = ({
     description,
     cover,
     summary,
-}: Event) => {
+}: AllEvent) => {
   return (
     <section className='event-overview'>
         <div className='flex flex-1 flex-col gap-5'>
