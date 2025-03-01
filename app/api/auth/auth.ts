@@ -1,10 +1,10 @@
 // import NextAuth, { User } from "next-auth"
-// import CredentialsProvider from 'next-auth/providers/credentials' 
+// import CredentialsProvider from 'next-auth/providers/credentials'
 // import { db } from "./database/drizzle"
 // import { users } from "./database/schema"
 // import { eq, or } from "drizzle-orm"
 // import {compare} from "bcryptjs"
- 
+
 // export const { handlers, signIn, signOut, auth } = NextAuth({
 //     session:{
 //         strategy:"jwt"
@@ -20,8 +20,7 @@
 //             .from(users)
 //             .where(
 //                 eq(users.email, credentials.email?.toString()),
-                   
-                
+
 //             )
 //             .limit(1);
 
@@ -51,7 +50,7 @@
 //         if (user) {
 //             token.id = user.id
 //             token.name = user.name
-            
+
 //         }
 
 //         return token},
@@ -67,12 +66,10 @@
 
 // })
 
-
-
 import NextAuth, { User } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { db } from "./database/drizzle";
-import { users } from "./database/schema";
+import { db } from "../../../database/drizzle";
+import { users } from "../../../database/schema";
 import { eq, or } from "drizzle-orm";
 import { compare } from "bcryptjs";
 
@@ -106,7 +103,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         if (user.length === 0) return null;
 
-        const isPasswordValid = await compare(credentials.password.toString(), user[0].password);
+        const isPasswordValid = await compare(
+          credentials.password.toString(),
+          user[0].password
+        );
         if (!isPasswordValid) return null;
 
         return {
@@ -143,10 +143,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       };
     },
   },
-
 });
 
 export const config = {
-  runtime: 'nodejs', 
+  runtime: "nodejs",
 };
-

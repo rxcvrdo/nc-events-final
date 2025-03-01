@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {SessionProvider} from "next-auth/react"
+import { SessionProvider } from "next-auth/react";
 
-
-import localFont from "next/font/local"
+import localFont from "next/font/local";
 import { ReactNode } from "react";
 import { Toaster } from "@/components/ui/toaster";
-import { auth } from "@/auth";
+import { auth } from "@/app/api/auth/auth";
 
 const ibmPlexSans = localFont({
   src: [
@@ -30,8 +29,8 @@ export const metadata: Metadata = {
   description: "nc-events is a platform where users can post events ",
 };
 
-const RootLayout =async ({ children }: { children: ReactNode }) => {
-  const session = await auth()
+const RootLayout = async ({ children }: { children: ReactNode }) => {
+  const session = await auth();
 
   return (
     <html lang="en">
@@ -40,12 +39,11 @@ const RootLayout =async ({ children }: { children: ReactNode }) => {
           className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased`}
         >
           {children}
-        <Toaster />
+          <Toaster />
         </body>
-        </SessionProvider>
+      </SessionProvider>
     </html>
-    
   );
 };
 
-export default RootLayout
+export default RootLayout;
