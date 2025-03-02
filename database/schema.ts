@@ -34,16 +34,16 @@ export const events = pgTable('events', {
 });
 
 // Bookings Table
-export const bookings = pgTable("booked_events", {
-  id: uuid("id").notNull().primaryKey().defaultRandom().unique(),
-  userId: uuid("user_id")
-    .references(() => users.id, { onDelete: "cascade" }) 
-    .notNull(),
-  eventId: uuid("event_id")
-    .references(() => events.id, { onDelete: "cascade" }) 
-    .notNull(),
-  bookedDate: timestamp("booked_date", { withTimezone: true }).defaultNow().notNull(),
-  eventDateTime: timestamp("eventDateTime", { withTimezone: true }), // ✅ Fixed to match `events`
-  isConfirmed: boolean("is_confirmed").default(true),
-  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
-});
+// export const bookings = pgTable("booked_events", {
+//   id: uuid("id").notNull().primaryKey().defaultRandom().unique(),
+//   userId: uuid("user_id")
+//     .references(() => users.id, { onDelete: "cascade" }) 
+//     .notNull(),
+//   eventId: uuid("event_id")
+//     .references(() => events.id, { onDelete: "cascade" }) 
+//     .notNull(),
+//   bookedDate: timestamp("booked_date", { withTimezone: true }).defaultNow().notNull(),
+//   eventDateTime: timestamp("eventDateTime", { withTimezone: true }), // ✅ Fixed to match `events`
+//   isConfirmed: boolean("is_confirmed").default(true),
+//   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+// });

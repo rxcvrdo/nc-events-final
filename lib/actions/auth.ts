@@ -9,6 +9,8 @@ import { eq, or } from "drizzle-orm";
 import { headers } from "next/headers";
 import ratelimit from "../ratelimit";
 import { redirect } from "next/navigation";
+import NextAuth from "next-auth";
+
 
 export const signInWithCredentials = async (
   params: Pick<AuthCredentails, "email" | "password">
@@ -66,7 +68,7 @@ export const signUp = async (params: AuthCredentails) => {
       password: hashedPassword,
     });
 
-    // await signInWithCredentials({email, username, password})
+    
 
     return { success: true };
   } catch (error) {
@@ -74,3 +76,5 @@ export const signUp = async (params: AuthCredentails) => {
     return { success: false, error: "signup error" };
   }
 };
+
+

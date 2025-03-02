@@ -1,0 +1,1 @@
+ALTER TABLE "booked_events" ALTER COLUMN "eventDateTime" SET DEFAULT now();

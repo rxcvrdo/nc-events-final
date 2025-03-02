@@ -14,11 +14,11 @@ export const adminSideBarLinks = [
     route: "/admin/events",
     text: "Create Events",
   },
-  // {
-  //   img: "/icons/admin/bookmark.svg",
-  //   route: "/admin/event-requests",
-  //   text: "Booking requests / booked",
-  // },
+  {
+    img: "/icons/admin/bookmark.svg",
+    route: "/admin/my-events",
+    text: "my events",
+  },
   // {
   //   img: "/icons/admin/user.svg",
   //   route: "/admin/account-requests",
