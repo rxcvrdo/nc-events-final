@@ -8,12 +8,12 @@ import { Button } from './ui/button'
 const EventCard = ({id, 
     title, 
     category, 
-    cover, 
+    coverUrl, 
     isBooked = false}
     : AllEvent) => 
     <li className={cn(isBooked && "xs:w-52 w-full")}>
         <Link href={`/events/${id}`} className={cn(isBooked && 'w-full flex flex-col items-center')}>
-            <EventCover variant='wide' coverImage={cover} />
+            <EventCover variant='wide' coverImage={coverUrl} />
 
             <div className={cn("mt-4", !isBooked && "xs:max-w-40 max-w-28")}>
                 <p className='event-title'>{title}</p>

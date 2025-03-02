@@ -1,15 +1,17 @@
 interface AllEvent{
-    id:number;
+    userId:string
+    id:string;
     title: string;
-    event_host: string;
+    eventHost: string;
     category: string;
     rating: number;
-    total_spaces: number;
-    available_spaces: number ;
+    totalSpaces: number;
+    availableSpaces: number ;
     description: string;
-    cover: string;
+    coverUrl: string;
     summary: string;
-    isBooked?: boolean;
+    createdAt: Date | null;
+    eventDateTime: Date
 
 }
 
@@ -18,4 +20,22 @@ interface AuthCredentails {
     email: string
     username: string 
     password: string
+}
+
+interface EventParams{
+    title: string;
+    eventHost: string;
+    category: string;
+    rating: number;
+    coverUrl:string
+    totalSpaces: number;
+    availableSpaces: number ;
+    description: string;
+    eventDateTime:Date
+
+}
+
+interface BookEventParams {
+    eventId:string 
+    userId: string
 }

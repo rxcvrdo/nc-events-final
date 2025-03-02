@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    domains: [], // Empty for now, only needed for external images
+    unoptimized: false, // Ensure this is NOT set to true globally
     remotePatterns: [
       {
         protocol: 'https',

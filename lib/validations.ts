@@ -16,12 +16,18 @@ export const signInSchema = z.object({
   path: ["email"], // Attach error to email field
 });
 
+
 export const eventSchema = z.object({
   title: z.string().trim().min(2).max(100),
   description: z.string().trim().min(10).max(1000),
-  organiser: z.string().trim().min(2).max(100),
+  eventHost: z.string().trim().min(2).max(100),
   category: z.string().trim().min(2).max(50),
   rating: z.number().min(1).max(5),
-  totalSize: z.coerce.number().int().positive().lte(10000),
-  coverUrl: z.string().nonempty()
-})
+  availableSpaces: z.coerce.number().int().positive().lte(10000),
+  coverUrl: z.string().nonempty(),
+  eventDateTime: z.string()
+    .nonempty()
+    .refine((val) => !isNaN(Date.parse(val)), {
+      message: "Invalid date format. Use ISO format (YYYY-MM-DDTHH:mm:ss.sssZ)",
+    }),
+});

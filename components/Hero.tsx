@@ -20,11 +20,12 @@ const Hero = () => {
             </Button>
           </div>
           <Image
-          src="/icons/hero-new-.png"
+          src="/icons/hero-new-w.png"
           alt="hero"
           width={1000}
           height={1000}
-          className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh] "
+          className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
+          unoptimized
           />
         </div>
       </div>

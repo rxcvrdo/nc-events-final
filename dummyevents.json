@@ -1,0 +1,35 @@
+[
+    {
+      "id": "9084986f-456c-449b-ae6e-59ef1f26b130",
+      "title": "CSS in Depth",
+      "eventHost": "Keith J. Grant",
+      "category": "Web Development",
+      "rating": 4,
+      "totalSpaces": 18,
+      "availableSpaces": 16,
+      "description": "CSS in Depth by Keith J. Grant is a comprehensive guide for web developers who want to go beyond the basics of CSS and master the intricacies of styling web pages. The event is designed for intermediate to advanced developers who are already familiar with CSS but want to deepen their understanding and leverage its full potential.",
+      "coverUrl": "https://ik.imagekit.io/pwd17k26p/books/covers/file_zIgYlIxcY.png"
+    },
+    {
+      "id": "350c3bc8-a5cc-45a3-ba16-97b93ed056b1",
+      "title": "HTML and CSS: Design and Build Websites",
+      "eventHost": "Jon Duckett",
+      "category": "Web Development",
+      "rating": 5,
+      "totalSpaces": 45,
+      "availableSpaces": 45,
+      "description": "Whether you’re a complete beginner or someone looking to brush up on HTML and CSS, this event provides a solid foundation and practical skills that can be applied immediately to real-world projects.",
+      "coverUrl": "https://ik.imagekit.io/pwd17k26p/books/covers/file_1pCoBDI11.png"
+    },
+    {
+      "id": "b514f922-a715-45ec-846e-e51d40e15aa3",
+      "title": "System Design Interview",
+      "eventHost": "Alex Xu",
+      "category": "System Design",
+      "rating": 5,
+      "totalSpaces": 10,
+      "availableSpaces": 10,
+      "description": "System Design Interview: An Insider's Guide by Alex Xu is a attend for software engineers and professionals preparing for system design interviews. The event provides a detailed overview of the principles and techniques needed to excel in system design interviews, which are often a key part of the hiring process at top tech companies.",
+      "coverUrl": "https://ik.imagekit.io/pwd17k26p/books/covers/file_CmVaNeXrQ.png"
+    }
+  ]
