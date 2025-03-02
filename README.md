@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🗓️ Event Hub
 
-## Getting Started
+Event Hub is a web application that allows users to create and manage events effortlessly. Built with **Next.js and Drizzle ORM**, it provides an intuitive user experience for event organizers.
 
-First, run the development server:
+## Features
 
-```bash
+- 🏷 **User Authentication** (via NextAuth)
+- 📆 **Create Events** (Users can add new events)
+- 📊 **PostgreSQL Database** (Hosted on Neon)
+- 🎨 **Modern UI with TailwindCSS**
+- 🚀 **Optimized for Performance with Next.js**
+- 📅 **Google Calendar Integration** 
+
+> ⚠️ **Upcoming Features:**
+> - ✏️ Update Events functionality  
+> - 🗑️ Delete Events  
+> - 🛡️ Role-Based Access Control (Admin/User)  
+> - 📅 Google Calendar Integration  
+
+---
+
+## 🏗️ Tech Stack
+
+| **Technology**  | **Usage** |
+|----------------|----------|
+| **Next.js (TypeScript)** | Frontend framework |
+| **NextAuth.js** | User authentication |
+| **Drizzle ORM** | Database management |
+| **PostgreSQL** | Database |
+| **Neon** | Cloud-based Postgres instance |
+| **TailwindCSS** | Styling |
+| **Vercel** | Deployment |
+
+---
+
+## 📂 Project Structure
+/event-hub │── /app # Next.js app directory │── /components # Reusable UI components │── /db # Drizzle ORM schema │── /pages/api # API routes │── /public # Static assets │── /styles # Global styles │── drizzle.config.ts # Database config │── .env # Environment variables │── package.json # Dependencies & scripts
+
+
+---
+
+## 🛠️ Installation & Setup
+
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/rxcvrdo/event-hub.git
+cd event-hub
+
+Install Dependencies
+sh
+Copy
+Edit
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
